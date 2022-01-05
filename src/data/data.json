@@ -1,0 +1,121 @@
+{
+  "primary_metrics": {
+    "total_followers": 23004,
+    "cards": [
+      {
+        "service": "facebook",
+        "username": "nathanf",
+        "value": "1987",
+        "label": "followers",
+        "metric": {
+          "value": "12",
+          "trend": "up"
+        }
+      },
+      {
+        "service": "twitter",
+        "username": "nathanf",
+        "value": "1044",
+        "label": "followers",
+        "metric": {
+          "value": "99",
+          "trend": "up"
+        }
+      },
+      {
+        "service": "instagram",
+        "username": "realnathanf",
+        "value": "11k",
+        "label": "followers",
+        "metric": {
+          "value": "1099",
+          "trend": "up"
+        }
+      },
+      {
+        "service": "youtube",
+        "username": "realnathanf",
+        "value": "8239",
+        "label": "subscribers",
+        "metric": {
+          "value": "144",
+          "trend": "down"
+        }
+      }
+    ]
+  },
+  "supporting_metrics": [
+    {
+      "service": "facebook",
+      "value": "87",
+      "label": "Page Views",
+      "metric": {
+        "percent": "3",
+        "trend": "up"
+      }
+    },
+    {
+      "service": "facebook",
+      "value": "52",
+      "label": "Likes",
+      "metric": {
+        "percent": "2",
+        "trend": "down"
+      }
+    },
+    {
+      "service": "instagram",
+      "value": "5462",
+      "label": "Likes",
+      "metric": {
+        "percent": "2257",
+        "trend": "up"
+      }
+    },
+    {
+      "service": "instagram",
+      "value": "52k",
+      "label": "Profile Views",
+      "metric": {
+        "percent": "1375",
+        "trend": "up"
+      }
+    },
+    {
+      "service": "twitter",
+      "value": "117",
+      "label": "Retweets",
+      "metric": {
+        "percent": "303",
+        "trend": "up"
+      }
+    },
+    {
+      "service": "twitter",
+      "value": "507",
+      "label": "Likes",
+      "metric": {
+        "percent": "593",
+        "trend": "up"
+      }
+    },
+    {
+      "service": "youtube",
+      "value": "107",
+      "label": "Likes",
+      "metric": {
+        "percent": "19",
+        "trend": "down"
+      }
+    },
+    {
+      "service": "youtube",
+      "value": "1407",
+      "label": "Total Views",
+      "metric": {
+        "percent": "12",
+        "trend": "down"
+      }
+    }
+  ]
+}
