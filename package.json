@@ -4,7 +4,15 @@
   "description": "## Instructions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run mkdirs",
+    "mkdirs": "mkdir -p ./dist/css && mkdir -p ./dist/js",
+    "clean": "rm -rf ./dist && mkdir -p ./dist/css && mkdir -p ./dist/js",
+    "build": "npm run clean && npm run compile:css",
+    "watch": "npm run clean && npm run watch:sass",
+    "prod": "npm run clean && npm run compile:prod-css",
+    "compile:css": "sass ./src/scss/styles.scss ./dist/css/main.css",
+    "compile:prod-css": "sass --no-source-map --style=compressed ./src/scss/styles.scss ./dist/css/main.css",
+    "watch:sass": "sass --watch ./src/scss/styles.scss ./dist/css/main.css"
   },
   "repository": {
     "type": "git",
