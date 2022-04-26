@@ -4,7 +4,18 @@
   "description": "## Instructions",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run mkdirs",
+    "mkdirs": "mkdir -p ./dist/css && mkdir -p ./dist/js",
+    "clean": "rm -rf ./dist && mkdir -p ./dist/css && mkdir -p ./dist/js",
+    "build": "npm run clean && npm run compile:css && npm run compile:js",
+    "watch": "npm run clean && concurrently \"npm run watch:sass\" \"npm run watch:js\"",
+    "prod": "npm run clean && npm run compile:prod-css && npm run compile:prod-js",
+    "compile:css": "sass ./src/scss/styles.scss ./dist/css/main.css",
+    "compile:prod-css": "sass --no-source-map --style=compressed ./src/scss/styles.scss ./dist/css/main.css",
+    "watch:sass": "sass --watch ./src/scss/styles.scss ./dist/css/main.css",
+    "compile:js": "npx rollup --config --environment NODE_ENV:development",
+    "watch:js": "npx rollup --config --watch --environment NODE_ENV:development",
+    "compile:prod-js": "npx rollup --config --compact --environment NODE_ENV:production"
   },
   "repository": {
     "type": "git",
@@ -17,7 +28,9 @@
   },
   "homepage": "https://github.com/louisemarie-donato/sass-louisemarie-donato#readme",
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "rollup": "^2.63.0",
+    "rollup-plugin-terser": "^7.0.2",
     "sass": "^1.45.2"
   }
 }
